@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ardiansyah Ihsan — Islamic Philanthropy &amp; Humanitarian Leadership</title>
+<meta name="description" content="Digital philanthropy strategist and humanitarian practitioner. Fifteen years building fundraising systems, zakat and waqf governance, and volunteer ecosystems in Indonesia.">
+<style>
+:root {
+  --ink: #111111;
+  --graphite: #4a4a4a;
+  --slate: #7c7c7c;
+  --hairline: #d8d5d0;
+  --bone: #f6f5f2;
+  --paper: #ffffff;
+  --display: Georgia, Cambria, "Times New Roman", serif;
+  --body: "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0; background: var(--bone); color: var(--ink);
+  font-family: var(--body); -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
+
+/* ---------- nav ---------- */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246,245,242,.93);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hairline);
+}
+nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 60px; }
+nav .brand {
+  font-family: var(--display); font-size: 16px; font-weight: 700;
+  letter-spacing: .02em; text-decoration: none; color: var(--ink); white-space: nowrap;
+}
+nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; overflow-x: auto; }
+nav a.navlink {
+  font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--graphite); text-decoration: none; white-space: nowrap;
+  padding: 4px 0; border-bottom: 1px solid transparent;
+}
+nav a.navlink:hover, nav a.navlink:focus-visible { color: var(--ink); border-bottom-color: var(--ink); }
+@media (max-width: 780px) { nav ul { display: none; } }
+
+/* ---------- shared ---------- */
+section { padding: clamp(56px, 9vw, 104px) 0; border-top: 1px solid var(--hairline); }
+section:first-of-type { border-top: none; }
+.eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--slate); margin: 0 0 30px;
+}
+.eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+h2.section-title {
+  font-family: var(--display); font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.15; margin: 0 0 22px; font-weight: 700; letter-spacing: -.01em;
+}
+p { line-height: 1.72; }
+.lede { font-size: 17px; color: var(--graphite); max-width: 62ch; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13.5px; letter-spacing: .06em; text-transform: uppercase;
+  text-decoration: none; padding: 14px 24px; border: 1px solid var(--ink);
+  transition: background .22s ease, color .22s ease;
+}
+.btn-solid { background: var(--ink); color: var(--paper); }
+.btn-solid:hover { background: var(--paper); color: var(--ink); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.btn svg { width: 15px; height: 15px; flex: none; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- hero ---------- */
+#hero { padding-top: clamp(48px, 7vw, 88px); }
+.masthead { display: grid; grid-template-columns: 190px 1fr; gap: clamp(24px, 4vw, 52px); align-items: start; }
+.portrait-frame { position: relative; }
+.portrait-frame::before { content: ""; position: absolute; inset: 10px -10px -10px 10px; border: 1px solid var(--ink); z-index: 0; }
+.portrait {
+  position: relative; z-index: 1; width: 190px; height: 232px;
+  object-fit: cover; filter: grayscale(100%) contrast(1.04);
+  background: #e6e3de; display: block;
+}
+h1.name {
+  font-family: var(--display); font-size: clamp(32px, 5.6vw, 54px);
+  line-height: 1.03; letter-spacing: -.015em; margin: 0 0 12px; font-weight: 700;
+}
+.headline {
+  font-family: var(--display); font-style: italic;
+  font-size: clamp(15px, 2.1vw, 19px); color: var(--graphite);
+  margin: 0 0 20px; line-height: 1.45;
+}
+.hero-bio { font-size: 15.5px; color: var(--graphite); max-width: 60ch; margin: 0 0 26px; }
+
+.dispatch {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px;
+  margin-top: 36px; padding: 16px 20px;
+  border-left: 3px solid var(--ink); background: rgba(255,255,255,.62);
+}
+.dispatch-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--slate); white-space: nowrap; }
+.dispatch-text { font-family: var(--display); font-size: 15.5px; line-height: 1.55; margin: 0; flex: 1 1 320px; }
+.dispatch-text em { color: var(--graphite); }
+
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 36px; border-top: 1px solid var(--hairline); }
+.stat { padding: 28px 22px 4px 0; border-right: 1px solid var(--hairline); }
+.stat:last-child { border-right: none; }
+.stat:not(:first-child) { padding-left: 22px; }
+.stat-num { font-family: var(--display); font-size: clamp(24px, 3.2vw, 33px); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); line-height: 1.5; }
+
+/* ---------- about ---------- */
+.about-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.about-grid p { font-size: 16px; color: var(--graphite); }
+.about-grid p + p { margin-top: 18px; }
+.pull {
+  font-family: var(--display); font-size: clamp(19px, 2.6vw, 24px);
+  line-height: 1.4; color: var(--ink); margin: 0;
+  padding-left: 22px; border-left: 3px solid var(--ink);
+}
+.pull cite { display: block; font-style: normal; font-family: var(--body); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--slate); margin-top: 14px; }
+
+/* ---------- focus ---------- */
+.focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px); }
+h3.sub { font-family: var(--display); font-size: 19px; margin: 0 0 14px; font-weight: 700; }
+.taglist { list-style: none; margin: 0; padding: 0; }
+.taglist li { padding: 11px 0; border-bottom: 1px solid var(--hairline); font-size: 15px; color: var(--graphite); }
+
+/* ---------- resume ---------- */
+.contents { list-style: none; margin: 0; padding: 0; }
+.contents li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 13px 0; border-bottom: 1px solid var(--hairline); font-size: 14.5px;
+}
+.contents li span:last-child { color: var(--slate); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.doc { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.sheet { background: var(--paper); border: 1px solid var(--hairline); aspect-ratio: 1 / 1.414; width: 100%; overflow: hidden; position: relative; }
+.sheet iframe { width: 100%; height: 100%; border: 0; display: block; }
+.sheet-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 32px; color: var(--slate); font-size: 13.5px; }
+.sheet-caption { margin-top: 12px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); }
+.meta { margin-top: 22px; font-size: 13px; color: var(--slate); line-height: 1.7; }
+
+/* ---------- projects ---------- */
+.project { padding-top: 46px; margin-top: 46px; border-top: 1px solid var(--hairline); }
+.project:first-of-type { padding-top: 0; margin-top: 0; border-top: none; }
+.project-num { font-family: var(--display); font-size: 13px; letter-spacing: .2em; color: var(--slate); margin: 0 0 8px; }
+h3.project-title { font-family: var(--display); font-size: clamp(22px, 3.2vw, 30px); line-height: 1.2; margin: 0 0 6px; font-weight: 700; }
+.project-sub { font-family: var(--display); font-style: italic; color: var(--graphite); margin: 0 0 24px; font-size: 16px; }
+.project-body { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 52px); }
+.project-body p { font-size: 15.5px; color: var(--graphite); margin: 0 0 16px; }
+.block-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--slate); margin: 0 0 8px; }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 4px; margin-top: 26px; }
+.figure { aspect-ratio: 4/3; background: #e9e6e1; filter: grayscale(100%); object-fit: cover; width: 100%; display: block; }
+.figure-slot {
+  aspect-ratio: 4/3; border: 1px dashed var(--hairline); background: rgba(255,255,255,.5);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #b4b0aa; padding: 10px;
+}
+.keyfigs { display: flex; flex-wrap: wrap; gap: 28px; margin: 0 0 22px; padding: 18px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.keyfig-num { font-family: var(--display); font-size: 24px; line-height: 1; }
+.keyfig-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); margin-top: 6px; }
+.quote-line { font-family: var(--display); font-size: 20px; line-height: 1.45; margin: 24px 0 0; padding-left: 20px; border-left: 3px solid var(--ink); }
+
+/* ---------- writing ---------- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.card { background: var(--paper); border: 1px solid var(--hairline); padding: 28px 24px; display: flex; flex-direction: column; }
+.card-kind { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--slate); margin: 0 0 12px; }
+.card h4 { font-family: var(--display); font-size: 19px; line-height: 1.3; margin: 0 0 12px; font-weight: 700; }
+.card p { font-size: 14px; color: var(--graphite); margin: 0 0 20px; flex: 1; }
+.card a.filelink { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); align-self: flex-start; padding-bottom: 2px; }
+.card a.filelink:hover { color: var(--graphite); border-color: var(--graphite); }
+
+/* ---------- speaking ---------- */
+.talks { list-style: none; margin: 0; padding: 0; }
+.talks li { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid var(--hairline); align-items: baseline; }
+.talk-title { font-family: var(--display); font-size: 17px; }
+.talk-venue { font-size: 13.5px; color: var(--slate); grid-column: 1 / -1; margin-top: -4px; }
+.talk-year { font-size: 13px; color: var(--slate); letter-spacing: .08em; }
+
+/* ---------- contact ---------- */
+#contact { background: var(--ink); color: var(--bone); }
+#contact .eyebrow { color: #8f8b85; }
+#contact .eyebrow::after { background: #333; }
+#contact h2.section-title { color: var(--paper); }
+#contact .lede { color: #c9c5be; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; padding-top: 32px; border-top: 1px solid #333; }
+.contact-label { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #8f8b85; margin: 0 0 8px; }
+.contact-val { font-size: 15.5px; color: var(--bone); text-decoration: none; border-bottom: 1px solid #444; }
+.contact-val:hover { border-color: var(--bone); }
+footer { padding: 28px 0 40px; font-size: 12.5px; color: #7a766f; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .about-grid, .focus-grid, .doc, .project-body { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .strip { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--hairline); }
+  .contact-grid { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 640px) {
+  .masthead { grid-template-columns: 1fr; }
+  .portrait { width: 150px; height: 184px; }
+  .portrait-frame::before { inset: 8px -8px -8px 8px; }
+  .actions .btn { flex: 1 1 100%; justify-content: center; }
+  .strip { grid-template-columns: 1fr; }
+  .stat { border-right: none; padding: 20px 0 4px; }
+  .stat:not(:first-child) { padding-left: 0; border-top: 1px solid var(--hairline); }
+  .keyfigs { gap: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#hero">Ardiansyah Ihsan</a>
+    <ul>
+      <li><a class="navlink" href="#about">About</a></li>
+      <li><a class="navlink" href="#focus">Focus</a></li>
+      <li><a class="navlink" href="#resume">Résumé</a></li>
+      <li><a class="navlink" href="#fieldwork">Field Work</a></li>
+      <li><a class="navlink" href="#writing">Writing</a></li>
+      <li><a class="navlink" href="#speaking">Speaking</a></li>
+      <li><a class="navlink" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div class="wrap">
+    <div class="masthead">
+      <div class="portrait-frame">
+        <img class="portrait" src="assets/ardiansyah-portrait.jpg" alt="Portrait of Ardiansyah Ihsan">
+      </div>
+      <div>
+        <h1 class="name">Ardiansyah Ihsan</h1>
+        <p class="headline">Digital philanthropy strategist, certified Nazhir and Amil, and
+          Master's candidate in Humanitarian Leadership.</p>
+        <p class="hero-bio">
+          Fifteen years inside Indonesian non-profit institutions — building fundraising systems,
+          governing zakat and waqf, and training the people who run them. I want to be remembered
+          as someone who turned generosity into impact.
+        </p>
+        <div class="actions">
+          <a class="btn btn-solid" href="assets/Ihsan_Ardiansyah_CV_Final.pdf" download="Ihsan_Ardiansyah_CV.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download résumé
+          </a>
+          <a class="btn btn-ghost" href="assets/casestudy-final.pdf">Read case study</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dispatch">
+      <span class="dispatch-label">Most recent field mission</span>
+      <p class="dispatch-text">Egypt, August 2026 — 5,067 food packages dispatched to Gaza in six
+        container trucks, alongside psychosocial and Qur'an programming for displaced Palestinian
+        families. One of fourteen Indonesian organisations deployed together.
+        <em>Hadiah untuk Palestina.</em></p>
+    </div>
+
+    <div class="strip">
+      <div class="stat"><div class="stat-num">15</div><div class="stat-label">Years in Islamic<br>philanthropy</div></div>
+      <div class="stat"><div class="stat-num">1,000+</div><div class="stat-label">Practitioners<br>trained</div></div>
+      <div class="stat"><div class="stat-num">98</div><div class="stat-label">Branches in a national<br>network led</div></div>
+      <div class="stat"><div class="stat-num">81,499</div><div class="stat-label">Volunteers mobilised<br>across 38 provinces</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title">Why Islamic philanthropy</h2>
+        <p>
+          I entered this field because generosity in Islam is not merely about giving. It is about
+          building systems that let people help others with dignity, trust, and lasting effect. My
+          route in was humanitarian and disaster response, where I saw that communities need more
+          than emergency assistance — they need stronger institutions, better resource mobilisation,
+          and a genuine path to resilience. Islamic philanthropy is where faith, humanity, and social
+          impact meet.
+        </p>
+        <p>
+          I hold a view that not everyone in this sector shares: philanthropy should not be treated
+          as a fundraising activity. It is a professional ecosystem of trust, resources, people,
+          technology, and impact. An institution's success is not measured by how much money it
+          raises, but by how effectively it converts generosity into sustainable change. Islamic
+          philanthropy also needs more courage to embrace innovation, data, and professional
+          management — without surrendering its ethical and spiritual foundation.
+        </p>
+        <p>
+          My work today centres on strengthening philanthropic and humanitarian organisations through
+          resource mobilisation, digital fundraising, institutional development, volunteer networks,
+          and community empowerment. What interests me most is the join between traditional
+          philanthropic values and modern systems. What I am working toward is an Islamic philanthropy
+          ecosystem that donors trust, that means something to the people it serves, that draws
+          younger generations in, and that can create impact at scale.
+        </p>
+      </div>
+      <div>
+        <p class="pull">
+          I want to be remembered as someone who turned generosity into impact — by helping people,
+          institutions, and communities move from giving to lasting change.
+          <cite>Personal statement</cite>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOCUS ============ -->
+<section id="focus">
+  <div class="wrap">
+    <p class="eyebrow">Areas of Focus</p>
+    <div class="focus-grid">
+      <div>
+        <h3 class="sub">Practice</h3>
+        <ul class="taglist">
+          <li>Digital fundraising strategy and channel design</li>
+          <li>Zakat and waqf institutional governance</li>
+          <li>Organisational capacity building and SOP design</li>
+          <li>Volunteer ecosystem development</li>
+          <li>Corporate partnership and B2B resource mobilisation</li>
+          <li>Cross-border humanitarian response</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="sub">Research Interests</h3>
+        <ul class="taglist">
+          <li>Legitimacy in zakat governance</li>
+          <li>State–private competition in philanthropic mobilisation</li>
+          <li>Digital legitimacy and real-time transparency</li>
+          <li>Muslim philanthropy in Southeast Asia</li>
+          <li>Faith-based humanitarian leadership</li>
+          <li>Impact measurement in Islamic social finance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESUME ============ -->
+<section id="resume">
+  <div class="wrap">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h2 class="section-title">Résumé</h2>
+    <div class="doc">
+      <div>
+        <ul class="contents">
+          <li><span>Education &amp; professional certification</span><span>Page 1</span></li>
+          <li><span>Peer-reviewed publication &amp; commentary</span><span>Page 1</span></li>
+          <li><span>Humanitarian field deployment</span><span>Page 1</span></li>
+          <li><span>Professional experience, 2012–present</span><span>Page 1–2</span></li>
+          <li><span>Volunteer &amp; professional leadership</span><span>Page 2</span></li>
+          <li><span>Invited talks, honours &amp; references</span><span>Page 2</span></li>
+        </ul>
+        <p class="meta">
+          Two pages · A4 · Updated August 2026<br>
+          Three professional references included. Prefer a Word version? Email me.
+        </p>
+        <div class="actions" style="margin-top:22px">
+          <a class="btn btn-solid" href="assets/Ihsan_Ardiansyah_CV_Final.pdf" download="Ihsan_Ardiansyah_CV.pdf">Download PDF</a>
+        </div>
+      </div>
+      <div>
+        <div class="sheet">
+          <div class="sheet-fallback">
+            <span>Preview unavailable on this device.</span>
+            <a class="btn btn-ghost" href="assets/Ihsan_Ardiansyah_CV_Final.pdf">Open the PDF</a>
+          </div>
+          <iframe src="assets/Ihsan_Ardiansyah_CV_Final.pdf#view=FitH&toolbar=0" title="Résumé of Ardiansyah Ihsan" loading="lazy"></iframe>
+        </div>
+        <p class="sheet-caption">Page one — scroll inside the sheet to read on</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIELD WORK ============ -->
+<section id="fieldwork">
+  <div class="wrap">
+    <p class="eyebrow">Field Work</p>
+    <h2 class="section-title">Four projects, and what they taught me</h2>
+    <p class="lede">Each of these changed how I understand the work. The numbers are here, but so is
+      what did not go to plan.</p>
+
+    <!-- 01 -->
+    <article class="project" style="margin-top:56px">
+      <p class="project-num">01</p>
+      <h3 class="project-title">Egypt–Palestine Humanitarian Mission</h3>
+      <p class="project-sub">Humanitarian action across borders · August 2026</p>
+
+      <div class="keyfigs">
+        <div><div class="keyfig-num">5,067</div><div class="keyfig-label">Food packages<br>dispatched to Gaza</div></div>
+        <div><div class="keyfig-num">6</div><div class="keyfig-label">Container trucks<br>across the border</div></div>
+        <div><div class="keyfig-num">14</div><div class="keyfig-label">Indonesian organisations<br>deployed together</div></div>
+      </div>
+
+      <div class="project-body">
+        <div>
+          <p class="block-label">The context</p>
+          <p>
+            I joined this mission under the Konsorsium Kebaikan Indonesia untuk Palestina, responding
+            to Gazans affected by the conflict and to Palestinian refugees sheltering in Egypt. The
+            context differed from ordinary humanitarian work. We were not only meeting material need;
+            we were meeting people carrying loss, trauma, displacement, and an unresolved future.
+          </p>
+          <p>
+            The challenge was keeping assistance both relevant and dignified, while making sure that
+            attention to Gaza did not end when the news cycle moved on. Humanitarian action has to be
+            sustained across borders and across faiths, so that the world keeps seeing that there are
+            human beings here who need solidarity.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I did</p>
+          <p>
+            We met and spoke directly with Gazan refugees in Egypt, and carried out visits and
+            coordination near the border. The interventions covered food assistance for affected
+            families; psychosocial programming for children, giving them room to play and be supported
+            after what they had lived through; Qur'an programming for hafiz students, as both spiritual
+            support and educational continuity; and a visit to the Palestinian hospital in Egypt, where
+            many patients were casualties evacuated from Gaza. Alongside this we mobilised and
+            dispatched 5,067 food packages in six container trucks from Egypt into Gaza.
+          </p>
+          <p>
+            The experience showed me that humanitarian response is not only distribution. It is also
+            presence, listening, keeping hope alive, building networks, and making sure the voices of
+            those affected do not disappear from public attention.
+          </p>
+        </div>
+        <div>
+          <p class="block-label">What did not go to plan</p>
+          <p>
+            Cross-border humanitarian work rarely follows its original design. Access, coordination,
+            security conditions, regulation, timing, and shifting realities on the ground all affected
+            how the programme and the distribution actually ran.
+          </p>
+          <p>
+            I also came to see that good intentions are not the same as effective intervention. There
+            are moments when we arrive carrying assumptions about what a community needs, while the
+            reality on the ground calls for a different approach. It is a reminder that in humanitarian
+            action we must listen more than we assume.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I would change</p>
+          <p>
+            Three things. First, stronger needs assessment and contextual analysis before intervening,
+            so that every programme rests on real needs and on the community's own voice. Second,
+            stronger monitoring and impact measurement — not only recording how much aid was delivered,
+            but understanding what changed for the people who received it. Third, a more integrated
+            strategy connecting relief, psychosocial support, spiritual support, advocacy, and
+            long-term humanitarian engagement.
+          </p>
+          <p>
+            I do not want a mission to end when the team flies home. The real challenge is sustaining
+            attention, solidarity, and public support for as long as the crisis lasts.
+          </p>
+          <p class="quote-line">
+            Presence is a form of aid. Witness is a form of responsibility. Solidarity is the energy
+            that keeps a humanitarian movement alive.
+          </p>
+        </div>
+      </div>
+
+      <div class="figures">
+        <img class="figure" src="assets/mesir_01.jpg" alt="Aid packages assembled in the loading hall under the “Hadiah Kemanusiaan dari Indonesia untuk Palestina” banner" loading="lazy">
+        <img class="figure" src="assets/mesir_02.jpg" alt="Container truck loaded and marked for the Indonesian humanitarian convoy to Gaza" loading="lazy">
+        <img class="figure" src="assets/mesir_03.jpg" alt="Food aid distribution convoy staged for departure from Egypt" loading="lazy">
+        <img class="figure" src="assets/mesir_04.jpg" alt="The Indonesian consortium delegation at the Palestine Red Crescent Society in Egypt" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="project">
+      <p class="project-num">02</p>
+      <h3 class="project-title">Digital Fundraising Academy</h3>
+      <p class="project-sub">Founder and Chief Executive Officer · 2025–present</p>
+
+      <div class="keyfigs">
+        <div><div class="keyfig-num">1,000+</div><div class="keyfig-label">Practitioners<br>trained</div></div>
+        <div><div class="keyfig-num">3</div><div class="keyfig-label">Institutions under<br>long-term mentoring</div></div>
+      </div>
+
+      <div class="project-body">
+        <div>
+          <p class="block-label">The problem</p>
+          <p>
+            Indonesian zakat institutions, waqf boards, and mosque committees were being told to go
+            digital without being given the professional foundations to do it. Training in the sector
+            tended to stop at the seminar — a day of inspiration, no follow-through, no change in how
+            the institution actually ran.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I built</p>
+          <p>
+            I founded the Academy to close that gap: capacity-building programmes covering professional
+            governance, programme utilisation, sustainability, and fundraising management, delivered
+            through webinars, seminars, bootcamps, and in-house training — then continued as
+            institutional consultancy and long-term mentoring rather than ending at the certificate.
+          </p>
+        </div>
+        <div>
+          <p class="block-label">Outcome</p>
+          <p>
+            More than a thousand cumulative participants have come through the programmes, including
+            mosque administrators and philanthropy practitioners across Indonesia. Consultancy
+            engagements have followed with Satu Amal Indonesia, Rumah Quran Rabbani, and Rabithah
+            Peduli, where the work extended into organisational structure, standard operating
+            procedures, core team formation, and donor network strategy.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I would add</p>
+          <p>
+            <em>[To be completed — what did not work as planned, and what you would change.]</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="figures">
+        <img class="figure" src="assets/dfa_01.jpg" alt="Digital fundraising session with practitioners, working through content, campaigner and customer-service functions" loading="lazy">
+        <img class="figure" src="assets/dfa_02.jpg" alt="Participants at the close of a Digital Fundraising Academy session" loading="lazy">
+        <img class="figure" src="assets/dfa_03.jpg" alt="Delivering a session on volunteer engagement in the digital age" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="project">
+      <p class="project-num">03</p>
+      <h3 class="project-title">A National Philanthropy Network of 98 Branches</h3>
+      <p class="project-sub">Director of Philanthropy Network · 2017–2022</p>
+
+      <div class="keyfigs">
+        <div><div class="keyfig-num">98</div><div class="keyfig-label">Branches<br>led</div></div>
+        <div><div class="keyfig-num">40%</div><div class="keyfig-label">Share of national retail<br>fundraising reached</div></div>
+        <div><div class="keyfig-num">65%</div><div class="keyfig-label">Rise in retail donor<br>engagement</div></div>
+      </div>
+
+      <div class="project-body">
+        <div>
+          <p class="block-label">The problem</p>
+          <p>
+            A national network is only as strong as its weakest branch. Retail fundraising sat well
+            below its potential, and branches were working against targets without a shared set of
+            channels or a common way of engaging donors.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I did</p>
+          <p>
+            I led the network against fundraising and programme impact targets, and developed seven
+            distinct philanthropy channels so branches had more than one route to the donor.
+          </p>
+        </div>
+        <div>
+          <p class="block-label">Outcome</p>
+          <p>
+            Branch retail fundraising rose to 40 per cent of the national total, and retail donor
+            engagement increased by 65 per cent.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I would add</p>
+          <p>
+            <em>[To be completed — what did not work as planned, and what you would change.]</em>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="project">
+      <p class="project-num">04</p>
+      <h3 class="project-title">Building a Volunteer Ecosystem</h3>
+      <p class="project-sub">Secretary General, Masyarakat Relawan Indonesia · 2020–2024</p>
+
+      <div class="keyfigs">
+        <div><div class="keyfig-num">81,499</div><div class="keyfig-label">Volunteers<br>in the network</div></div>
+        <div><div class="keyfig-num">38</div><div class="keyfig-label">Provinces<br>covered</div></div>
+        <div><div class="keyfig-num">390</div><div class="keyfig-label">Districts<br>and cities</div></div>
+      </div>
+
+      <div class="project-body">
+        <div>
+          <p class="block-label">The problem</p>
+          <p>
+            Volunteer movements grow fast and organise slowly. Numbers alone do not make a network
+            deployable — without structure, a large volunteer base cannot be matched to the work that
+            actually needs doing.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I built</p>
+          <p>
+            Alongside growing the network across 38 provinces and 390 districts and cities, I
+            established a volunteer clustering system organised by programme area and by profession,
+            so that skills could be matched to need rather than counted in aggregate.
+          </p>
+        </div>
+        <div>
+          <p class="block-label">Outcome</p>
+          <p>
+            A national volunteer society of 81,499 members with a structure that made specialised
+            deployment possible. In parallel, as CEO of Relawan Filantropi Indonesia, I developed a
+            community-based digital philanthropy agent platform integrating online and offline
+            volunteers through qurban agent, affiliate crowdfunding, and digital advocate systems.
+          </p>
+          <p class="block-label" style="margin-top:26px">What I would add</p>
+          <p>
+            <em>[To be completed — what did not work as planned, and what you would change.]</em>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ WRITING ============ -->
+<section id="writing">
+  <div class="wrap">
+    <p class="eyebrow">Research &amp; Writing</p>
+    <h2 class="section-title">Academic and professional work</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="card-kind">Case study</p>
+        <h4>Contested Legitimacy in Indonesian Zakat Governance</h4>
+        <p>
+          Twelve data sources, three practitioner interviews, and one constitutional challenge.
+          A qualitative study of state–private competition in Indonesian zakat, arguing that what is
+          really contested is legitimacy — and introducing "digital legitimacy" as credibility earned
+          through real-time transparency rather than conferred by legal status.
+        </p>
+        <a class="filelink" href="assets/casestudy-final.pdf">Download PDF</a>
+      </div>
+      <div class="card">
+        <p class="card-kind">Reflective reviews</p>
+        <h4>Reflective Book Reviews I–III</h4>
+        <p>
+          Three reflective reviews: <em>Philanthropy in the Muslim World</em> (Siddiqui &amp; Campbell,
+          2023), <em>9 Myths About Muslim Charities</em> (Demir), and <em>Understanding Muslim
+          Philanthropy</em> (Siddiqui, Wasif &amp; Hughes, 2024) — on legitimacy, public narrative, and
+          why formalisation may answer a problem donors do not actually experience.
+        </p>
+        <a class="filelink" href="assets/book-reviews.pdf">Download PDF</a>
+      </div>
+      <div class="card">
+        <p class="card-kind">Peer-reviewed article</p>
+        <h4>The Impact of the SEHATI Programme on Halal Certification Interest among MSMEs</h4>
+        <p>
+          Published in <em>ADL Islamic Economic</em>, 6(1), 98–104, examining the effectiveness of a
+          public programme in driving community participation.
+        </p>
+        <a class="filelink" href="https://doi.org/10.56644/adl.v6i1.143">View publication</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKING ============ -->
+<section id="speaking">
+  <div class="wrap">
+    <p class="eyebrow">Speaking</p>
+    <h2 class="section-title">Selected invited talks</h2>
+    <ul class="talks">
+      <li><span class="talk-title">The Art of Islamic Philanthropy</span><span class="talk-year">2026</span><span class="talk-venue">Real Masjid, Indonesia</span></li>
+      <li><span class="talk-title">Mobilising Islamic Philanthropy</span><span class="talk-year">2026</span><span class="talk-venue">Intermediate Volunteer Class, Yayasan Satu Amal Indonesia</span></li>
+      <li><span class="talk-title">Content for Masjid</span><span class="talk-year">2026</span><span class="talk-venue">Bootcamp Cendikia, Masjid Cendikia</span></li>
+      <li><span class="talk-title">Qurban in the Midst of the Pandemic</span><span class="talk-year">2021</span><span class="talk-venue">Centre for Islamic Economics and Business, Universitas Indonesia, Depok</span></li>
+      <li><span class="talk-title">Fiqh and Qurban Management</span><span class="talk-year">2021</span><span class="talk-venue">Institut Manajemen Zakat (IMZ)</span></li>
+      <li><span class="talk-title">Waqf Building Life</span><span class="talk-year">2020</span><span class="talk-venue">Global Wakaf, Indonesia</span></li>
+      <li><span class="talk-title">Disaster Management Basic Training</span><span class="talk-year">2019</span><span class="talk-venue">Masyarakat Relawan Indonesia, Bengkulu</span></li>
+    </ul>
+    <div class="figures">
+      <img class="figure" src="assets/talk_01.jpg" alt="Speaking at the Intermediate Volunteer Class, Yayasan Satu Amal Indonesia" loading="lazy">
+      <img class="figure" src="assets/talk_02.jpg" alt="Participants during a question session at a volunteer training event" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Let's work together</h2>
+    <p class="lede">Open to collaboration on Islamic philanthropy, humanitarian programming,
+      institutional development, and research partnerships.</p>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-label">Email</p>
+        <a class="contact-val" href="mailto:ardiansyah.ihsan87@gmail.com">ardiansyah.ihsan87@gmail.com</a>
+      </div>
+      <div>
+        <p class="contact-label">LinkedIn</p>
+        <a class="contact-val" href="https://linkedin.com/in/Ardiansyah-ihsan">linkedin.com/in/Ardiansyah-ihsan</a>
+      </div>
+      <div>
+        <p class="contact-label">Based in</p>
+        <span class="contact-val" style="border:none">Palembang, South Sumatra, Indonesia</span>
+      </div>
+    </div>
+    <footer>© 2026 Ardiansyah Ihsan · Master of Humanitarian Leadership, Zakat Foundation Institute</footer>
+  </div>
+</section>
+
+</body>
+</html>
